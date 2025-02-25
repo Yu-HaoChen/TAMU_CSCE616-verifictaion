@@ -1,0 +1,164 @@
+xrun: 22.03-s012: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.03-s012: Started on Sep 16, 2024 at 00:51:58 CDT
+xrun
+	-f run.f
+		+access+rwc
+		-timescale 1ns/1ps
+		-gui
+		-input waves.tcl
+		-uvmhome /opt/coe/cadence/XCELIUM/tools/methodology/UVM/CDNS-1.1d/sv
+		+UVM_VERBOSITY=UVM_LOW
+		-f file_list.f
+			-incdir ../tb
+			../tb/top.sv
+
+   User defined plus("+") options:
+	+UVM_VERBOSITY=UVM_LOW
+
+Recompiling... reason: file '../tb/top.sv' is newer than expected.
+	expected: Mon Sep 16 00:48:38 2024
+	actual:   Mon Sep 16 00:51:56 2024
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /opt/coe/cadence/XCELIUM/tools/methodology/UVM/CDNS-1.1d/sv
+file: ../tb/top.sv
+	module worklib.top:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: ....................
+    $fatal("Randomization failed!");
+                                 |
+xmelab: *W,STRINT (../tb/top.sv,36|33): String literal argument supplied to integer parameter.
+    $fatal("Randomization failed!");
+                                 |
+xmelab: *W,STRINT (../tb/top.sv,48|33): String literal argument supplied to integer parameter.
+ Done
+	Generating native compiled code:
+		worklib.top:sv <0x36421516>
+			streams:  29, words: 79889
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                       1       1
+		Verilog packages:              4       4
+		Registers:                 12968   10089
+		Named events:                  4      12
+		Initial blocks:              256     150
+		Parallel blocks:              26      27
+		Assertions:                    2       2
+		SV Class declarations:       190     304
+		SV Class specializations:    339     339
+		Simulation timescale:        1ns
+	Writing initial simulation snapshot: worklib.top:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+SVSEED default: 1
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /opt/coe/cadence/XCELIUM/tools/xcelium/files/xmsimrc
+xcelium> source /opt/coe/cadence/XCELIUM/tools/methodology/UVM/CDNS-1.1d/sv/files/tcl/uvm_sim.tcl
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create top -all -memories -depth all -tasks -functions -all -database waves -waveform
+xmsim: *W,PRWFD: Only the signals/variables having immediate scope 'top' will be added to the waveform viewer.
+xmsim: *W,PRFRTNEV: (-FUNCTION) Database must be opened in -EVENT mode to capture calling scope data.
+xmsim: *W,PRLDYN: The design contains dynamic objects. The "-all" option excludes dynamic objects to improve performance. To enable probing of dynamic objects the "-all -dynamic" options should be added to the probe command.
+Created probe 1
+xcelium> 
+xcelium> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (22.03-s012)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+stop -create -name Randomize -randomize
+Created stop Randomize
+
+------------------------------------------------------
+Name           Type           Size  Value             
+------------------------------------------------------
+htax_packet_c  htax_packet_c  -     @2577             
+  delay        integral       32    'h13              
+  dest_port    integral       32    'h1               
+  vc           da(integral)   0     -                 
+  length       integral       32    'h13              
+  data         da(integral)   19    -                 
+    [0]        integral       64    'h482dc5a1ce8f56ba
+    [1]        integral       64    'hb0e85beeb84554b8
+    [2]        integral       64    'h96ea962d9d7a2fb4
+    [3]        integral       64    'h54f3bf301be19853
+    [4]        integral       64    'hbe41eb1858a83c11
+    ...        ...            ...   ...               
+    [14]       integral       64    'h9c764e13edab9084
+    [15]       integral       64    'ha8cc69a57460d2ea
+    [16]       integral       64    'ha551fe38e48956d5
+    [17]       integral       64    'h6b27a6348b0d1df3
+    [18]       integral       64    'hf4ac22bef0491ab5
+------------------------------------------------------
+length= 19
+------------------------------------------------------
+Name           Type           Size  Value             
+------------------------------------------------------
+htax_packet_c  htax_packet_c  -     @2669             
+  delay        integral       32    'hf               
+  dest_port    integral       32    'h3               
+  vc           da(integral)   0     -                 
+  length       integral       32    'h1a              
+  data         da(integral)   26    -                 
+    [0]        integral       64    'h5ba7ce084c3d4cf4
+    [1]        integral       64    'h9cb411cf17f2d82c
+    [2]        integral       64    'he328c14ca854ba18
+    [3]        integral       64    'hd15ba8677d01ddf3
+    [4]        integral       64    'h595cad1a40ca5da 
+    ...        ...            ...   ...               
+    [21]       integral       64    'hdedbacef0f977082
+    [22]       integral       64    'h527db67050d2b228
+    [23]       integral       64    'h2fa1f360ae997247
+    [24]       integral       64    'hea951c2e87a1e970
+    [25]       integral       64    'hc7a4770ad4033e62
+------------------------------------------------------
+length= 26
+
+#### Factory Configuration (*)
+
+  No instance or type overrides are registered with this factory
+
+All types registered with the factory: 37 total
+(types without type names will not be printed)
+
+  Type Name
+  ---------
+  htax_packet_c
+(*) Types with no associated type name will be printed as <unknown>
+
+####
+
+Simulation complete via $finish(1) at time 455 NS + 0
+../tb/top.sv:57 	#10 $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun	22.03-s012: Exiting on Sep 16, 2024 at 00:55:25 CDT  (total: 00:03:27)

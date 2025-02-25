@@ -1,0 +1,233 @@
+xrun: 22.03-s012: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.03-s012: Started on Sep 02, 2024 at 01:38:10 CDT
+xrun
+	-f run.f
+		+access+rwc
+		-gui
+		-timescale 1ns/1ns
+		../design/simple_mem.sv
+		../tb/simple_mem_tb.sv
+Recompiling... reason: unable to stat '/./home/grads/h/harrison900531/lab-1-Yu-HaoChen/work/design/simple_mem.sv'.
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		mem_test
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:              19      19
+		Scalar wires:            4       -
+		Vectored wires:          4       -
+		Always blocks:           2       2
+		Initial blocks:          2       2
+		Pseudo assignments:      7       7
+		Simulation timescale:  1ns
+	Writing initial simulation snapshot: worklib.mem_test:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /opt/coe/cadence/XCELIUM/tools/xcelium/files/xmsimrc
+xcelium> run 1000ns 
+-----Asynch Memory Reset-----
+[time:20] addr [0]: read_data xx
+[time:40] addr [1]: read_data 00
+[time:60] addr [2]: read_data 00
+[time:80] addr [3]: read_data 00
+[time:100] addr [4]: read_data 00
+[time:120] addr [5]: read_data 00
+[time:140] addr [6]: read_data 00
+[time:160] addr [7]: read_data 00
+[time:180] addr [8]: read_data 00
+[time:200] addr [9]: read_data 00
+[time:220] addr [10]: read_data 00
+[time:240] addr [11]: read_data 00
+[time:260] addr [12]: read_data 00
+[time:280] addr [13]: read_data 00
+[time:300] addr [14]: read_data 00
+[time:320] addr [15]: read_data 00
+[time:340] addr [16]: read_data 00
+[time:360] addr [17]: read_data 00
+[time:380] addr [18]: read_data 00
+[time:400] addr [19]: read_data 00
+[time:420] addr [20]: read_data 00
+[time:440] addr [21]: read_data 00
+[time:460] addr [22]: read_data 00
+[time:480] addr [23]: read_data 00
+[time:500] addr [24]: read_data 00
+[time:520] addr [25]: read_data 00
+[time:540] addr [26]: read_data 00
+[time:560] addr [27]: read_data 00
+[time:580] addr [28]: read_data 00
+[time:600] addr [29]: read_data 00
+[time:620] addr [30]: read_data 00
+[time:640] addr [31]: read_data 00
+-----Write in Data-----
+[time:660] addr [0]  data_in   0 
+[time:680] addr [1]  data_in   1 
+[time:700] addr [2]  data_in   2 
+[time:720] addr [3]  data_in   3 
+[time:740] addr [4]  data_in   4 
+[time:760] addr [5]  data_in   5 
+[time:780] addr [6]  data_in   6 
+[time:800] addr [7]  data_in   7 
+[time:820] addr [8]  data_in   8 
+[time:840] addr [9]  data_in   9 
+[time:860] addr [10]  data_in  10 
+[time:880] addr [11]  data_in  11 
+[time:900] addr [12]  data_in  12 
+[time:920] addr [13]  data_in  13 
+[time:940] addr [14]  data_in  14 
+[time:960] addr [15]  data_in  15 
+[time:980] addr [16]  data_in  16 
+Ran until 1 US + 0
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm mem_test.addr mem_test.clk mem_test.data_in mem_test.data_out mem_test.data_rd mem_test.rd_en mem_test.read_data mem_test.rst_n mem_test.wr_en
+Created probe 1
+xcelium> reset
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+Loaded snapshot worklib.mem_test:sv
+xcelium> run
+-----Asynch Memory Reset-----
+[time:20] addr [0]: read_data xx
+[time:40] addr [1]: read_data 00
+[time:60] addr [2]: read_data 00
+[time:80] addr [3]: read_data 00
+[time:100] addr [4]: read_data 00
+[time:120] addr [5]: read_data 00
+[time:140] addr [6]: read_data 00
+[time:160] addr [7]: read_data 00
+[time:180] addr [8]: read_data 00
+[time:200] addr [9]: read_data 00
+[time:220] addr [10]: read_data 00
+[time:240] addr [11]: read_data 00
+[time:260] addr [12]: read_data 00
+[time:280] addr [13]: read_data 00
+[time:300] addr [14]: read_data 00
+[time:320] addr [15]: read_data 00
+[time:340] addr [16]: read_data 00
+[time:360] addr [17]: read_data 00
+[time:380] addr [18]: read_data 00
+[time:400] addr [19]: read_data 00
+[time:420] addr [20]: read_data 00
+[time:440] addr [21]: read_data 00
+[time:460] addr [22]: read_data 00
+[time:480] addr [23]: read_data 00
+[time:500] addr [24]: read_data 00
+[time:520] addr [25]: read_data 00
+[time:540] addr [26]: read_data 00
+[time:560] addr [27]: read_data 00
+[time:580] addr [28]: read_data 00
+[time:600] addr [29]: read_data 00
+[time:620] addr [30]: read_data 00
+[time:640] addr [31]: read_data 00
+-----Write in Data-----
+[time:660] addr [0]  data_in   0 
+[time:680] addr [1]  data_in   1 
+[time:700] addr [2]  data_in   2 
+[time:720] addr [3]  data_in   3 
+[time:740] addr [4]  data_in   4 
+[time:760] addr [5]  data_in   5 
+[time:780] addr [6]  data_in   6 
+[time:800] addr [7]  data_in   7 
+[time:820] addr [8]  data_in   8 
+[time:840] addr [9]  data_in   9 
+[time:860] addr [10]  data_in  10 
+[time:880] addr [11]  data_in  11 
+[time:900] addr [12]  data_in  12 
+[time:920] addr [13]  data_in  13 
+[time:940] addr [14]  data_in  14 
+[time:960] addr [15]  data_in  15 
+[time:980] addr [16]  data_in  16 
+[time:1000] addr [17]  data_in  17 
+[time:1020] addr [18]  data_in  18 
+[time:1040] addr [19]  data_in  19 
+[time:1060] addr [20]  data_in  20 
+[time:1080] addr [21]  data_in  21 
+[time:1100] addr [22]  data_in  22 
+[time:1120] addr [23]  data_in  23 
+[time:1140] addr [24]  data_in  24 
+[time:1160] addr [25]  data_in  25 
+[time:1180] addr [26]  data_in  26 
+[time:1200] addr [27]  data_in  27 
+[time:1220] addr [28]  data_in  28 
+[time:1240] addr [29]  data_in  29 
+[time:1260] addr [30]  data_in  30 
+[time:1280] addr [31]  data_in  31 
+-----current vs expected value-----
+[time:1300] addr [0]: read_data 00
+[time:1300] [[1;32mCorrect[m] current addr[0] value:   0 - expected value: 0
+[time:1320] addr [1]: read_data 00
+[time:1320] [[0;31mERROR[m] current addr[1] value:   0 - expected value: 1
+[time:1340] addr [2]: read_data 01
+[time:1340] [[0;31mERROR[m] current addr[2] value:   1 - expected value: 2
+[time:1360] addr [3]: read_data 02
+[time:1360] [[0;31mERROR[m] current addr[3] value:   2 - expected value: 3
+[time:1380] addr [4]: read_data 03
+[time:1380] [[0;31mERROR[m] current addr[4] value:   3 - expected value: 4
+[time:1400] addr [5]: read_data 04
+[time:1400] [[0;31mERROR[m] current addr[5] value:   4 - expected value: 5
+[time:1420] addr [6]: read_data 05
+[time:1420] [[0;31mERROR[m] current addr[6] value:   5 - expected value: 6
+[time:1440] addr [7]: read_data 06
+[time:1440] [[0;31mERROR[m] current addr[7] value:   6 - expected value: 7
+[time:1460] addr [8]: read_data 07
+[time:1460] [[0;31mERROR[m] current addr[8] value:   7 - expected value: 8
+[time:1480] addr [9]: read_data 08
+[time:1480] [[0;31mERROR[m] current addr[9] value:   8 - expected value: 9
+[time:1500] addr [10]: read_data 09
+[time:1500] [[0;31mERROR[m] current addr[10] value:   9 - expected value: 10
+[time:1520] addr [11]: read_data 0a
+[time:1520] [[0;31mERROR[m] current addr[11] value:  10 - expected value: 11
+[time:1540] addr [12]: read_data 0b
+[time:1540] [[0;31mERROR[m] current addr[12] value:  11 - expected value: 12
+[time:1560] addr [13]: read_data 0c
+[time:1560] [[0;31mERROR[m] current addr[13] value:  12 - expected value: 13
+[time:1580] addr [14]: read_data 0d
+[time:1580] [[0;31mERROR[m] current addr[14] value:  13 - expected value: 14
+[time:1600] addr [15]: read_data 0e
+[time:1600] [[0;31mERROR[m] current addr[15] value:  14 - expected value: 15
+[time:1620] addr [16]: read_data 0f
+[time:1620] [[0;31mERROR[m] current addr[16] value:  15 - expected value: 16
+[time:1640] addr [17]: read_data 10
+[time:1640] [[0;31mERROR[m] current addr[17] value:  16 - expected value: 17
+[time:1660] addr [18]: read_data 11
+[time:1660] [[0;31mERROR[m] current addr[18] value:  17 - expected value: 18
+[time:1680] addr [19]: read_data 12
+[time:1680] [[0;31mERROR[m] current addr[19] value:  18 - expected value: 19
+[time:1700] addr [20]: read_data 13
+[time:1700] [[0;31mERROR[m] current addr[20] value:  19 - expected value: 20
+[time:1720] addr [21]: read_data 14
+[time:1720] [[0;31mERROR[m] current addr[21] value:  20 - expected value: 21
+[time:1740] addr [22]: read_data 15
+[time:1740] [[0;31mERROR[m] current addr[22] value:  21 - expected value: 22
+[time:1760] addr [23]: read_data 16
+[time:1760] [[0;31mERROR[m] current addr[23] value:  22 - expected value: 23
+[time:1780] addr [24]: read_data 17
+[time:1780] [[0;31mERROR[m] current addr[24] value:  23 - expected value: 24
+[time:1800] addr [25]: read_data 18
+[time:1800] [[0;31mERROR[m] current addr[25] value:  24 - expected value: 25
+[time:1820] addr [26]: read_data 19
+[time:1820] [[0;31mERROR[m] current addr[26] value:  25 - expected value: 26
+[time:1840] addr [27]: read_data 1a
+[time:1840] [[0;31mERROR[m] current addr[27] value:  26 - expected value: 27
+[time:1860] addr [28]: read_data 1b
+[time:1860] [[0;31mERROR[m] current addr[28] value:  27 - expected value: 28
+[time:1880] addr [29]: read_data 1c
+[time:1880] [[0;31mERROR[m] current addr[29] value:  28 - expected value: 29
+[time:1900] addr [30]: read_data 1d
+[time:1900] [[0;31mERROR[m] current addr[30] value:  29 - expected value: 30
+[time:1920] addr [31]: read_data 1e
+[time:1920] [[0;31mERROR[m] current addr[31] value:  30 - expected value: 31
+Simulation complete via $finish(1) at time 1920 NS + 0
+../tb/simple_mem_tb.sv:66   $finish; 
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun	22.03-s012: Exiting on Sep 02, 2024 at 01:56:17 CDT  (total: 00:18:07)
