@@ -1,0 +1,154 @@
+xrun: 22.03-s012: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.03-s012: Started on Sep 08, 2024 at 17:32:53 CDT
+xrun
+	-f run.f
+		+access+rwc
+		-timescale 1ns/1ns
+		../design/cache_mem.sv
+		../tb/cache_mem_tb.sv
+		../tb/cache_mem_intf.sv
+		../tb/top.sv
+Recompiling... reason: file '../design/cache_mem.sv' is newer than expected.
+	expected: Sun Sep  8 17:30:40 2024
+	actual:   Sun Sep  8 17:32:49 2024
+file: ../design/cache_mem.sv
+	module worklib.cache_mem:sv
+		errors: 0, warnings: 0
+file: ../tb/cache_mem_tb.sv
+	module worklib.cache_mem_test:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		top
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.cache_mem_test:sv <0x672e6031>
+			streams:   1, words:  4420
+		worklib.cache_mem:sv <0x4d346629>
+			streams:  10, words:  9694
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 3       3
+		Interfaces:              1       1
+		Registers:              20      20
+		Scalar wires:            6       -
+		Vectored wires:          4       -
+		Always blocks:           2       2
+		Initial blocks:          4       4
+		Pseudo assignments:      7       7
+		Simulation timescale:  1ns
+	Writing initial simulation snapshot: worklib.top:sv
+Loading snapshot worklib.top:sv .................... Done
+SVSEED default: 1
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /opt/coe/cadence/XCELIUM/tools/xcelium/files/xmsimrc
+xcelium> run
+Asynch Memory Reset
+xmsim: *W,OLDURR: The default algorithm for $urandom_range and randcase is used. It can have distribution problems..
+Write Address : 8 with data : c6
+Read Address : 8 with data : c6
+[time:60] [[0;32mcorrect[m] addr[8] (correct_data: c6) data: c6
+Write Address : 24 with data : be
+Read Address : 24 with data : be
+[time:100] [[0;32mcorrect[m] addr[24] (correct_data: be) data: be
+Write Address : 4 with data : 2c
+Read Address : 4 with data : 2c
+[time:140] [[0;32mcorrect[m] addr[4] (correct_data: 2c) data: 2c
+Write Address : 10 with data : f0
+Read Address : 10 with data : f0
+[time:180] [[0;32mcorrect[m] addr[10] (correct_data: f0) data: f0
+Write Address : 22 with data : 91
+Read Address : 22 with data : 91
+[time:220] [[0;32mcorrect[m] addr[22] (correct_data: 91) data: 91
+Write Address : 2 with data : 46
+Read Address : 2 with data : 46
+[time:260] [[0;32mcorrect[m] addr[2] (correct_data: 46) data: 46
+Write Address : 15 with data : 31
+Read Address : 15 with data : 31
+[time:300] [[0;32mcorrect[m] addr[15] (correct_data: 31) data: 31
+Write Address : 19 with data : da
+Read Address : 19 with data : da
+[time:340] [[0;32mcorrect[m] addr[19] (correct_data: da) data: da
+Write Address : 12 with data : b9
+Read Address : 12 with data : b9
+[time:380] [[0;32mcorrect[m] addr[12] (correct_data: b9) data: b9
+Write Address : 13 with data : 3f
+Read Address : 13 with data : 3f
+[time:420] [[0;32mcorrect[m] addr[13] (correct_data: 3f) data: 3f
+Write Address : 5 with data : c5
+Read Address : 5 with data : c5
+[time:460] [[0;32mcorrect[m] addr[5] (correct_data: c5) data: c5
+Write Address : 12 with data : 52
+Read Address : 12 with data : 52
+[time:500] [[0;32mcorrect[m] addr[12] (correct_data: 52) data: 52
+Write Address : 24 with data : b
+Read Address : 24 with data : 0
+[time:540] [[0;31mERROR[m] addr[24] (correct_data: b) data: 0
+Write Address : 17 with data : d1
+Read Address : 17 with data : d1
+[time:580] [[0;32mcorrect[m] addr[17] (correct_data: d1) data: d1
+Write Address : 4 with data : 55
+Read Address : 4 with data : 55
+[time:620] [[0;32mcorrect[m] addr[4] (correct_data: 55) data: 55
+Write Address : 31 with data : ae
+Read Address : 31 with data : ae
+[time:660] [[0;32mcorrect[m] addr[31] (correct_data: ae) data: ae
+Write Address : 21 with data : 31
+Read Address : 21 with data : 31
+[time:700] [[0;32mcorrect[m] addr[21] (correct_data: 31) data: 31
+Write Address : 18 with data : 21
+Read Address : 18 with data : 21
+[time:740] [[0;32mcorrect[m] addr[18] (correct_data: 21) data: 21
+Write Address : 3 with data : 69
+Read Address : 3 with data : 69
+[time:780] [[0;32mcorrect[m] addr[3] (correct_data: 69) data: 69
+Write Address : 15 with data : 80
+Read Address : 15 with data : 80
+[time:820] [[0;32mcorrect[m] addr[15] (correct_data: 80) data: 80
+Write Address : 10 with data : 31
+Read Address : 10 with data : 31
+[time:860] [[0;32mcorrect[m] addr[10] (correct_data: 31) data: 31
+Write Address : 19 with data : cf
+Read Address : 19 with data : cf
+[time:900] [[0;32mcorrect[m] addr[19] (correct_data: cf) data: cf
+Write Address : 1 with data : 23
+Read Address : 1 with data : 23
+[time:940] [[0;32mcorrect[m] addr[1] (correct_data: 23) data: 23
+Write Address : 3 with data : 17
+Read Address : 3 with data : 17
+[time:980] [[0;32mcorrect[m] addr[3] (correct_data: 17) data: 17
+Write Address : 21 with data : ec
+Read Address : 21 with data : ec
+[time:1020] [[0;32mcorrect[m] addr[21] (correct_data: ec) data: ec
+Write Address : 15 with data : 78
+Read Address : 15 with data : 78
+[time:1060] [[0;32mcorrect[m] addr[15] (correct_data: 78) data: 78
+Write Address : 6 with data : c3
+Read Address : 6 with data : c3
+[time:1100] [[0;32mcorrect[m] addr[6] (correct_data: c3) data: c3
+Write Address : 31 with data : fe
+Read Address : 31 with data : 0
+[time:1140] [[0;31mERROR[m] addr[31] (correct_data: fe) data: 0
+Write Address : 25 with data : 9f
+Read Address : 25 with data : 9f
+[time:1180] [[0;32mcorrect[m] addr[25] (correct_data: 9f) data: 9f
+Write Address : 23 with data : 34
+Read Address : 23 with data : 34
+[time:1220] [[0;32mcorrect[m] addr[23] (correct_data: 34) data: 34
+Write Address : 5 with data : 26
+Read Address : 5 with data : 26
+[time:1260] [[0;32mcorrect[m] addr[5] (correct_data: 26) data: 26
+Write Address : 27 with data : 7b
+Read Address : 27 with data : 7b
+[time:1300] [[0;32mcorrect[m] addr[27] (correct_data: 7b) data: 7b
+Write Address : 22 with data : 65
+Read Address : 22 with data : 65
+[time:1340] [[0;32mcorrect[m] addr[22] (correct_data: 65) data: 65
+Simulation complete via $finish(1) at time 1340 NS + 0
+../tb/cache_mem_tb.sv:38 	$finish;
+xcelium> exit
+TOOL:	xrun	22.03-s012: Exiting on Sep 08, 2024 at 17:32:54 CDT  (total: 00:00:01)
