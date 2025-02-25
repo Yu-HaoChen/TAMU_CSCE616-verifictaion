@@ -1,0 +1,5 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(13Oct2024:14:12:47):( xrun -f run.f +UVM_TESTNAME=mix_sequence_test )
