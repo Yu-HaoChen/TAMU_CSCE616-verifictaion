@@ -1,5 +1,0 @@
-Cadence vManager(64): 22.03-s001: (c) Copyright 1995-2022 Cadence Design Systems Inc - Simulator version: 22.03-s012 - Coverage engine version: 22.03-s012
-Starting gui mode
-vmanager: *I,runner.startingSession: Starting session /home/grads/h/harrison900531/CSCE616-verification/lab-10-Yu-HaoChen/work/sim/run_vm.vsif
-vmanager: *W,runner.drmWarning: Runner: DRM: Job limit of 100 was reduced to 1 due to usage of Serial Local DRM.
-vmanager: *I,runner.sessionStarted: Session htax_regress.harrison900531.24_12_02_01_44_31_7603 started.
